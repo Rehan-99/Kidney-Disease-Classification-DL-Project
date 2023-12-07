@@ -1,5 +1,6 @@
 # Kidney-Disease-Classification-DL-Project
 
+<<<<<<< HEAD
 ## How to run?
 
 ### STEPS:
@@ -25,3 +26,6 @@ pip install -r requirements.txt
 ```bash 
 python app.py
 ```
+=======
+## Deep Learning Mlops project using AWS, MlFlow, Docker, DVC
+>>>>>>> efc604591f3ad101a02a23ec669433b1bd36f2f6
