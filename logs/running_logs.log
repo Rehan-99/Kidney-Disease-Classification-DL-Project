@@ -1,1 +1,17 @@
 [2023-12-07 20:12:19,477: INFO: main: welcome to custom Log]
+[2023-12-11 20:54:07,579: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-11 20:54:07,579: ERROR: main: DataIngestionTrainingPipeline.main() takes 0 positional arguments but 1 was given]
+Traceback (most recent call last):
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\main.py", line 11, in <module>
+    data_ingestion.main()
+TypeError: DataIngestionTrainingPipeline.main() takes 0 positional arguments but 1 was given
+[2023-12-11 20:55:57,417: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-11 20:55:57,418: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-11 20:55:57,419: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-11 20:55:57,420: INFO: common: created directory at: artifacts]
+[2023-12-11 20:55:57,420: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-11 20:55:57,421: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-12-11 20:56:10,093: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-12-11 20:56:10,731: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
