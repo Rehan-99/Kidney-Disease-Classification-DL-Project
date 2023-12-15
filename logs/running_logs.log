@@ -35,3 +35,60 @@ x==========x]
 [2023-12-12 20:36:46,661: INFO: main: >>>>>> stage Prepare Base Model completed <<<<<<
 
 x==========x]
+[2023-12-15 19:23:35,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-15 19:23:35,519: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-15 19:23:35,524: INFO: common: created directory at: artifacts]
+[2023-12-15 19:23:35,528: INFO: common: created directory at: artifacts\training]
+[2023-12-15 20:00:05,200: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-15 20:00:05,201: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-15 20:00:05,207: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-15 20:00:05,207: INFO: common: created directory at: artifacts]
+[2023-12-15 20:00:05,207: ERROR: main: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\Stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2023-12-15 20:03:48,034: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-15 20:03:48,036: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-15 20:03:48,037: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-15 20:03:48,037: INFO: common: created directory at: artifacts]
+[2023-12-15 20:03:48,037: ERROR: main: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\main.py", line 13, in <module>
+    data_ingestion.main()
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\Stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2023-12-15 20:05:34,451: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-12-15 20:05:34,452: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-15 20:05:34,453: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-15 20:05:34,454: INFO: common: created directory at: artifacts]
+[2023-12-15 20:05:34,454: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-12-15 20:05:34,455: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-12-15 20:05:45,053: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2023-12-15 20:05:45,571: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-12-15 20:05:45,571: INFO: main: =====================##########=============================]
+[2023-12-15 20:05:45,571: INFO: main: >>>>>> stage Prepare Base Model started <<<<<<]
+[2023-12-15 20:05:45,572: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-15 20:05:45,573: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-15 20:05:45,574: INFO: common: created directory at: artifacts]
+[2023-12-15 20:05:45,574: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-12-15 20:05:45,938: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-12-15 20:05:46,132: INFO: main: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2023-12-15 20:05:46,132: INFO: main: =====================##########=============================]
+[2023-12-15 20:05:46,132: INFO: main: >>>>>> stage Training started <<<<<<]
+[2023-12-15 20:05:46,133: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-15 20:05:46,134: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-15 20:05:46,135: INFO: common: created directory at: artifacts]
+[2023-12-15 20:05:46,135: INFO: common: created directory at: artifacts\training]
+[2023-12-15 20:21:42,226: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
