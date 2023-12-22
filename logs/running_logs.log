@@ -350,3 +350,488 @@ x==========x]
 [2023-12-20 19:29:23,669: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2023-12-21 19:54:18,991: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-21 19:54:18,992: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-21 19:54:51,492: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 19:54:51] "GET / HTTP/1.1" 200 -]
+[2023-12-21 19:55:23,105: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-21 19:55:23,117: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 19:55:23] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-21 20:02:08,717: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:02:08] "GET / HTTP/1.1" 200 -]
+[2023-12-21 20:02:14,298: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 16, in predict
+    # load model
+            ^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-21 20:02:14,307: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:02:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-21 20:20:49,599: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:20:49] "GET / HTTP/1.1" 200 -]
+[2023-12-21 20:20:54,289: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 16, in predict
+    # load model
+            ^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-21 20:20:54,297: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:20:54] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-21 20:22:17,358: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:22:17] "GET / HTTP/1.1" 200 -]
+[2023-12-21 20:22:40,081: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 16, in predict
+    # load model
+            ^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-21 20:22:40,089: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:22:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-21 20:25:09,736: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:25:09] "GET / HTTP/1.1" 200 -]
+[2023-12-21 20:25:13,744: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 16, in predict
+    # load model
+            ^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2023-12-21 20:25:13,752: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:25:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-21 20:25:27,190: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-21 20:25:27,190: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-21 20:26:30,036: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:26:30] "GET / HTTP/1.1" 200 -]
+[2023-12-21 20:26:39,418: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 20, in predict
+    test_image = image.load_img(imagename, target_size = (224,224))
+                 ^^^^^^^^^^^^^^
+AttributeError: module 'keras.preprocessing.image' has no attribute 'load_img'
+[2023-12-21 20:26:39,421: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:26:39] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-21 20:32:01,991: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-21 20:32:01,991: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-21 20:32:03,627: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:32:03] "GET / HTTP/1.1" 200 -]
+[2023-12-21 20:32:09,398: INFO: _internal: 127.0.0.1 - - [21/Dec/2023 20:32:09] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 18:47:17,706: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 18:47:17] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 18:47:22,016: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 18:47:22] "GET / HTTP/1.1" 200 -]
+[2023-12-22 18:47:29,019: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 18:47:29] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 18:50:19,659: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 18:50:19] "GET / HTTP/1.1" 200 -]
+[2023-12-22 18:50:39,338: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 18:50:39,338: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 18:54:59,543: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 18:54:59] "GET / HTTP/1.1" 200 -]
+[2023-12-22 18:57:51,274: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 18:57:51] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 19:23:33,529: INFO: stage_03_model_training: *******************]
+[2023-12-22 19:23:33,529: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-12-22 19:23:33,535: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:23:33,536: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:23:33,537: INFO: common: created directory at: artifacts]
+[2023-12-22 19:23:33,537: INFO: common: created directory at: artifacts\training]
+[2023-12-22 19:26:50,414: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-12-22 19:26:58,102: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 19:26:58,102: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 19:26:58,104: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:26:58,105: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:26:58,105: INFO: common: created directory at: artifacts]
+[2023-12-22 19:27:10,155: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:27:10,155: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:27:10,155: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 19:27:10,155: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 19:27:10,156: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 19:27:10,158: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:27:10,160: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:27:10,162: INFO: common: created directory at: artifacts]
+[2023-12-22 19:27:22,236: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:27:22,237: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:27:22,237: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 19:29:25,061: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 19:29:25,062: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 19:32:23,425: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 19:32:23] "GET / HTTP/1.1" 200 -]
+[2023-12-22 19:32:29,397: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 19:32:29] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 19:33:00,771: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 19:33:00] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 19:33:08,450: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 19:33:08] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 19:42:05,994: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model started <<<<<<]
+[2023-12-22 19:42:05,996: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:42:05,997: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:42:05,997: INFO: common: created directory at: artifacts]
+[2023-12-22 19:42:05,998: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-12-22 19:42:06,389: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-12-22 19:42:06,548: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2023-12-22 19:42:12,799: INFO: stage_03_model_training: *******************]
+[2023-12-22 19:42:12,799: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-12-22 19:42:12,801: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:42:12,802: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:42:12,802: INFO: common: created directory at: artifacts]
+[2023-12-22 19:42:12,802: INFO: common: created directory at: artifacts\training]
+[2023-12-22 19:45:18,486: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-12-22 19:45:25,909: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 19:45:25,910: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 19:45:25,911: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:45:25,912: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:45:25,913: INFO: common: created directory at: artifacts]
+[2023-12-22 19:45:38,274: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:45:38,275: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:45:38,275: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 19:45:38,275: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 19:45:38,275: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 19:45:38,277: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 19:45:38,278: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 19:45:38,279: INFO: common: created directory at: artifacts]
+[2023-12-22 19:45:50,551: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:45:50,552: INFO: common: json file saved at: scores.json]
+[2023-12-22 19:45:50,552: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 20:00:35,496: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model started <<<<<<]
+[2023-12-22 20:00:35,498: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:00:35,499: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:00:35,499: INFO: common: created directory at: artifacts]
+[2023-12-22 20:00:35,500: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-12-22 20:00:35,947: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-12-22 20:00:36,104: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2023-12-22 20:00:42,395: INFO: stage_03_model_training: *******************]
+[2023-12-22 20:00:42,395: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-12-22 20:00:42,397: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:00:42,398: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:00:42,398: INFO: common: created directory at: artifacts]
+[2023-12-22 20:00:42,398: INFO: common: created directory at: artifacts\training]
+[2023-12-22 20:03:49,582: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-12-22 20:03:57,333: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 20:03:57,333: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 20:03:57,335: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:03:57,336: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:03:57,337: INFO: common: created directory at: artifacts]
+[2023-12-22 20:04:09,465: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:04:09,466: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:04:09,466: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 20:04:09,466: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 20:04:09,466: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 20:04:09,468: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:04:09,469: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:04:09,470: INFO: common: created directory at: artifacts]
+[2023-12-22 20:04:22,309: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:04:22,309: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:04:22,310: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 20:05:03,778: INFO: stage_03_model_training: *******************]
+[2023-12-22 20:05:03,779: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-12-22 20:05:03,780: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:05:03,781: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:05:03,781: INFO: common: created directory at: artifacts]
+[2023-12-22 20:05:03,782: INFO: common: created directory at: artifacts\training]
+[2023-12-22 20:11:12,335: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-12-22 20:11:20,009: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 20:11:20,009: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 20:11:20,010: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:11:20,011: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:11:20,012: INFO: common: created directory at: artifacts]
+[2023-12-22 20:11:31,978: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:11:31,979: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:11:31,979: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 20:11:31,979: INFO: stage_04_model_evaluation: *******************]
+[2023-12-22 20:11:31,979: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-12-22 20:11:31,981: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-12-22 20:11:31,982: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-12-22 20:11:31,982: INFO: common: created directory at: artifacts]
+[2023-12-22 20:11:44,128: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:11:44,129: INFO: common: json file saved at: scores.json]
+[2023-12-22 20:11:44,129: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-12-22 20:13:14,125: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 20:13:14,125: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 20:30:20,291: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:30:20] "GET / HTTP/1.1" 200 -]
+[2023-12-22 20:30:30,452: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:30:30] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:44:32,538: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:44:32] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:44:39,528: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:44:39] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:45:08,828: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:45:08] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:45:23,935: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000022C6DAB20C0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2023-12-22 20:45:23,940: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:45:23] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:52:19,540: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:52:19] "GET / HTTP/1.1" 200 -]
+[2023-12-22 20:52:25,395: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000022C6DAB1580> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2023-12-22 20:52:25,400: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:52:25] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:55:56,045: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 20:55:56,045: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 20:56:37,841: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:56:37] "GET / HTTP/1.1" 200 -]
+[2023-12-22 20:56:54,175: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:56:54] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 20:59:21,518: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:59:21] "GET / HTTP/1.1" 200 -]
+[2023-12-22 20:59:32,758: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 20:59:32,758: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 20:59:37,926: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:59:37] "GET / HTTP/1.1" 200 -]
+[2023-12-22 20:59:42,660: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 20:59:42] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:01:08,718: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 21:01:08,719: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 21:01:18,968: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:01:18] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:01:26,944: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:01:26] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:01:38,025: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:01:38] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:04:00,084: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 21:04:00,085: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 21:05:47,272: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:05:47] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:05:51,536: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:05:51] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:06:19,374: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:06:19] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:06:42,748: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 21:06:42,748: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 21:06:50,329: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:06:50] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:06:56,860: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:06:56] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:10:57,636: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:10:57] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:15:55,218: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:15:55] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:16:12,271: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 21:16:12,271: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 21:16:34,854: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:16:34] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:16:39,899: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:16:39] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:23:08,357: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:23:08] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:23:21,166: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:23:21] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:23:47,098: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 21:23:47,099: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 21:23:51,262: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:23:51] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:23:53,847: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\mlops\Kidney-Disease-Classification-DL-Project\src\cnnClassifier\pipeline\predict.py", line 21, in predict
+    image_name = image.load_img(imagename, target_size = (224,224))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rehan Shaikh\AppData\Local\Programs\Python\Python311\Lib\site-packages\PIL\Image.py", line 3305, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000001F521F9A840>
+[2023-12-22 21:23:53,903: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:23:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2023-12-22 21:23:55,417: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:23:55] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:24:02,565: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:24:02] "POST /predict HTTP/1.1" 200 -]
