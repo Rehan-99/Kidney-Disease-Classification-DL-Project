@@ -874,3 +874,10 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 [2024-01-20 19:43:49,319: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2024-01-20 19:49:38,252: INFO: _internal: 127.0.0.1 - - [20/Jan/2024 19:49:38] "GET / HTTP/1.1" 200 -]
 [2024-01-20 19:49:45,658: INFO: _internal: 127.0.0.1 - - [20/Jan/2024 19:49:45] "POST /predict HTTP/1.1" 200 -]
+[2024-01-20 19:52:07,092: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.110:8080]
+[2024-01-20 19:52:07,093: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-01-20 19:52:14,282: INFO: _internal: 127.0.0.1 - - [20/Jan/2024 19:52:14] "GET / HTTP/1.1" 200 -]
+[2024-01-20 19:52:20,196: INFO: _internal: 127.0.0.1 - - [20/Jan/2024 19:52:20] "POST /predict HTTP/1.1" 200 -]
