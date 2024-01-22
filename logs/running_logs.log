@@ -843,3 +843,34 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 [2023-12-22 21:30:39,786: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:30:39] "GET / HTTP/1.1" 200 -]
 [2023-12-22 21:30:44,917: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:30:44] "POST /predict HTTP/1.1" 200 -]
 [2023-12-22 21:31:13,271: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:31:13] "POST /predict HTTP/1.1" 200 -]
+[2023-12-22 21:40:11,182: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.102:8080]
+[2023-12-22 21:40:11,182: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2023-12-22 21:40:15,811: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:40:15] "GET / HTTP/1.1" 200 -]
+[2023-12-22 21:40:23,428: INFO: _internal: 127.0.0.1 - - [22/Dec/2023 21:40:23] "POST /predict HTTP/1.1" 200 -]
+[2024-01-13 19:43:02,103: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.110:8080]
+[2024-01-13 19:43:02,104: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-01-13 19:44:41,400: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 19:44:41] "GET / HTTP/1.1" 200 -]
+[2024-01-13 19:44:55,189: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 19:44:55] "POST /predict HTTP/1.1" 200 -]
+[2024-01-13 19:46:17,652: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 19:46:17] "POST /predict HTTP/1.1" 200 -]
+[2024-01-13 19:46:24,689: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 19:46:24] "POST /predict HTTP/1.1" 200 -]
+[2024-01-13 20:00:15,936: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.110:8080]
+[2024-01-13 20:00:15,937: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-01-13 20:00:31,301: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 20:00:31] "GET / HTTP/1.1" 200 -]
+[2024-01-13 20:00:37,688: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 20:00:37] "POST /predict HTTP/1.1" 200 -]
+[2024-01-13 20:00:45,761: INFO: _internal: 127.0.0.1 - - [13/Jan/2024 20:00:45] "POST /predict HTTP/1.1" 200 -]
+[2024-01-20 19:43:49,319: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.110:8080]
+[2024-01-20 19:43:49,319: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-01-20 19:49:38,252: INFO: _internal: 127.0.0.1 - - [20/Jan/2024 19:49:38] "GET / HTTP/1.1" 200 -]
+[2024-01-20 19:49:45,658: INFO: _internal: 127.0.0.1 - - [20/Jan/2024 19:49:45] "POST /predict HTTP/1.1" 200 -]
